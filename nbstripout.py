@@ -186,7 +186,7 @@ def strip_output(nb, keep_output, keep_count):
             if output_style in cell.metadata:
                 cell.metadata[output_style] = False
         if 'metadata' in cell:
-            for field in ['collapsed', 'scrolled', 'ExecuteTime']:
+            for field in ['collapsed', 'scrolled', 'ExecuteTime', 'ein.hycell', 'ein.tags']:
                 cell.metadata.pop(field, None)
     return nb
 
